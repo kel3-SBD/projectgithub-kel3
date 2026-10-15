@@ -1,0 +1,172 @@
+:root {
+  --paper: #eef1f5;
+  --ink: #14213d;
+  --muted: #4a5670;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100svh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* ---------- Header & footer ---------- */
+
+.top {
+  padding: clamp(1.25rem, 3vw, 2.25rem) clamp(1.25rem, 4vw, 3rem) clamp(1rem, 2vw, 1.5rem);
+}
+
+.top h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.top p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+}
+
+.bottom {
+  padding: 0.9rem clamp(1.25rem, 4vw, 3rem);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Tiga panel ---------- */
+
+main { min-height: 0; display: flex; }
+
+.slabs {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.slab {
+  --bg: #2f6bff;
+  --on: #ffffff;
+  --focus: #ffffff;
+
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--on);
+  text-decoration: none;
+  transition: flex-grow 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.slab:hover,
+.slab:focus-visible {
+  flex-grow: 1.9;
+}
+
+.slab:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: -10px;
+}
+
+/* Huruf awal besar sebagai latar */
+.slab .initial {
+  position: absolute;
+  top: -0.12em;
+  left: 0.06em;
+  font-size: clamp(10rem, 32vw, 28rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  opacity: 0.16;
+  pointer-events: none;
+  user-select: none;
+}
+
+.slab .name {
+  position: relative;
+  margin: 0;
+  font-size: clamp(1.8rem, 3.6vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.slab .desc {
+  position: relative;
+  max-width: 30ch;
+  margin: 0.75rem 0 0;
+  font-size: 1.05rem;
+}
+
+.slab .path {
+  position: relative;
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.slab .open {
+  position: relative;
+  width: fit-content;
+  margin-top: 0.4rem;
+  border-bottom: 2px solid currentColor;
+  font-weight: 600;
+}
+
+/* Warna tiap orang */
+.slab[data-id="rasya"]  { --bg: #2f6bff; --on: #ffffff; --focus: #ffffff; }
+.slab[data-id="rayhan"] { --bg: #f2b01e; --on: #14213d; --focus: #14213d; }
+.slab[data-id="fadli"]  { --bg: #14805a; --on: #ffffff; --focus: #ffffff; }
+
+/* ---------- Fallback tanpa JavaScript ---------- */
+
+.fallback {
+  margin: 0;
+  padding: 1.5rem clamp(1.25rem, 4vw, 3rem);
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.fallback a { color: var(--ink); }
+
+/* ---------- Layar kecil: panel disusun ke bawah ---------- */
+
+@media (max-width: 720px) {
+  main { display: block; }
+
+  .slabs {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .slab {
+    flex: none;
+    min-height: 30svh;
+    transition: none;
+  }
+
+  .slab:hover,
+  .slab:focus-visible { flex-grow: 0; }
+
+  .slab .initial { font-size: 14rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slab { transition: none; }
+}
