@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="welcome.css">
 </head>
 <body>
   <header class="top">
@@ -19,14 +19,32 @@
 
   <main>
     <nav class="slabs" id="slabs" aria-label="Daftar website personal">
-      <!-- Diisi oleh script.js. Kalau JavaScript mati, daftar di bawah ini yang dipakai. -->
-      <noscript>
-        <ul class="fallback">
-          <li><a href="rasya/">Rasya Vikran Annadief</a></li>
-          <li><a href="rayhan/">Rayhan Akmal Wibowo</a></li>
-          <li><a href="fadli/">Fadli Ahmad Akbar</a></li>
-        </ul>
-      </noscript>
+
+      <!-- Untuk mengubah nama, deskripsi, atau folder, edit langsung di sini. -->
+      <a class="slab" data-id="rasya" href="rasya/">
+        <span class="initial" aria-hidden="true">R</span>
+        <h2 class="name">Rasya Vikran Annadief</h2>
+        <p class="desc">Personal website Rasya, mahasiswa Teknik Informatika UIN Jakarta.</p>
+        <p class="path">Folder: /rasya</p>
+        <span class="open">Buka website</span>
+      </a>
+
+      <a class="slab" data-id="rayhan" href="rayhan/">
+        <span class="initial" aria-hidden="true">R</span>
+        <h2 class="name">Rayhan Akmal Wibowo</h2>
+        <p class="desc">Personal website Rayhan, mahasiswa Teknik Informatika UIN Jakarta.</p>
+        <p class="path">Folder: /rayhan</p>
+        <span class="open">Buka website</span>
+      </a>
+
+      <a class="slab" data-id="fadli" href="fadli/">
+        <span class="initial" aria-hidden="true">F</span>
+        <h2 class="name">Fadli Ahmad Akbar</h2>
+        <p class="desc">Personal website Fadli, mahasiswa Teknik Informatika UIN Jakarta.</p>
+        <p class="path">Folder: /fadli</p>
+        <span class="open">Buka website</span>
+      </a>
+
     </nav>
   </main>
 
@@ -34,6 +52,6 @@
     Kelompok 3, Sistem Basis Data, Teknik Informatika UIN Syarif Hidayatullah Jakarta
   </footer>
 
-  <script src="script.js"></script>
+  <script src="welcome.js"></script>
 </body>
 </html>
