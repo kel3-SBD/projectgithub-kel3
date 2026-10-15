@@ -130,9 +130,9 @@ main { min-height: 0; display: flex; }
 }
 
 /* Warna tiap orang */
-.slab[data-id="rasya"]  { --bg: #2f6bff; --on: #ffffff; --focus: #ffffff; }
-.slab[data-id="rayhan"] { --bg: #f2b01e; --on: #14213d; --focus: #14213d; }
-.slab[data-id="fadli"]  { --bg: #14805a; --on: #ffffff; --focus: #ffffff; }
+.slab[data-id="Rasya"]  { --bg: #2f6bff; --on: #ffffff; --focus: #ffffff; }
+.slab[data-id="Akmal"] { --bg: #f2b01e; --on: #14213d; --focus: #14213d; }
+.slab[data-id="Fadli"]  { --bg: #14805a; --on: #ffffff; --focus: #ffffff; }
 
 /* ---------- Fallback tanpa JavaScript ---------- */
 
