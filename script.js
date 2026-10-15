@@ -2,21 +2,21 @@
 // folder = nama direktori di repositori (harus sama persis, huruf kecil/besar berpengaruh)
 const members = [
   {
-    id: "rasya",
+    id: "Rasya",
     name: "Rasya Vikran Annadief",
-    folder: "rasya",
+    folder: "Rasya",
     desc: "Personal website Rasya, mahasiswa Teknik Informatika UIN Jakarta."
   },
   {
-    id: "rayhan",
+    id: "Akmal",
     name: "Rayhan Akmal Wibowo",
-    folder: "rayhan",
+    folder: "Akmal",
     desc: "Personal website Rayhan, mahasiswa Teknik Informatika UIN Jakarta."
   },
   {
-    id: "fadli",
+    id: "Fadli",
     name: "Fadli Ahmad Akbar",
-    folder: "fadli",
+    folder: "Fadli",
     desc: "Personal website Fadli, mahasiswa Teknik Informatika UIN Jakarta."
   }
 ];
